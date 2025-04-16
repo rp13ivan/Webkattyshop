@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda Online</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        
+        header {
+            background-color: #D8A0A6; /* Palo rosa */
+            color: #000;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        
+        nav {
+            background-color: #222; /* Negro */
+            padding: 10px 0;
+        }
+        
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav li {
+            margin: 0 15px;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #D8A0A6; /* Palo rosa */
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            color: #222;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #D8A0A6;
+        }
+        
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .product-image {
+            height: 200px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .product-info {
+            padding: 15px;
+        }
+        
+        .product-title {
+            margin: 0 0 10px 0;
+            color: #222;
+        }
+        
+        .product-price {
+            font-weight: bold;
+            color: #D8A0A6; /* Palo rosa */
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        
+        .product-description {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #222; /* Negro */
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #D8A0A6; /* Palo rosa */
+            color: #222;
+        }
+        
+        .contact {
+            background-color: #222; /* Negro */
+            color: #fff;
+            padding: 40px 0;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .contact-info {
+            line-height: 1.6;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 4px;
+        }
+        
+        .contact-form textarea {
+            height: 100px;
+        }
+        
+        .contact-form .btn {
+            background-color: #D8A0A6; /* Palo rosa */
+            color: #222;
+        }
+        
+        .contact-form .btn:hover {
+            background-color: #c68e94;
+        }
+        
+        footer {
+            background-color: #111;
+            color: #999;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.8em;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .products {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Mi Tienda</div>
+        <p>Los mejores productos a tu alcance</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container" id="inicio">
+        <h2 class="section-title">Bienvenido a nuestra tienda</h2>
+        <p>Aquí encontrarás los mejores productos con la mejor calidad y precio del mercado. Navega por nuestro catálogo y descubre todo lo que tenemos para ofrecerte.</p>
+    </div>
+    
+    <div class="container" id="productos">
+        <h2 class="section-title">Nuestros Productos</h2>
+        <div class="products">
+            <!-- Producto 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="imagenes/k1.png" width="160%" height="100%" alt="Producto 1">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Delineadores Liquidos</h3>
+                    <p class="product-description">NUEVOS TONOS NEÓN</p>
+                    <p class="product-price">$2.00</p>
+                    <a href="#" class="btn">Ver detalles</a>
+                </div>
+            </div>
+            
+            <!-- Producto 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="imagenes/k2.png" width="160%" height="100%"  alt="Producto 2">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Delineador Liquido</h3>
+                    <p class="product-description">CON GLITTER</p>
+                    <p class="product-price">$2.00</p>
+                    <a href="#" class="btn">Ver detalles</a>
+                </div>
+            </div>
+            
+            <!-- Producto 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="imagenes/k3.png" width="160%" height="100%" alt="Producto 3">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Delineadores en Lápiz</h3>
+                    <p class="product-description"></p>
+                    <p class="product-price">$1.00</p>
+                    <a href="#" class="btn">Ver detalles</a>
+                </div>
+            </div>
+            
+            <!-- Producto 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="imagenes/k4.png" width="160%" height="100%" alt="Producto 4">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Delineadores en Lápiz</h3>
+                    <p class="product-description"></p>
+                    <p class="product-price">$1.25</p>
+                    <a href="#" class="btn">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="contact" id="contacto">
+        <div class="container">
+            <h2 class="section-title" style="color: #fff; border-bottom-color: #D8A0A6;">Contacto</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <p><strong>Dirección:</strong> El Transito</p>
+                    <p><strong>Teléfono:</strong> 0939296382</p>
+                    <p><strong>Email:</strong> </p>
+                    <p><strong>Horario:</strong> Lunes a Sabado 8am - 6pm</p>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Envíanos un mensaje</h3>
+                    <form>
+                        <input type="text" placeholder="Nombre">
+                        <input type="email" placeholder="Email">
+                        <input type="text" placeholder="Asunto">
+                        <textarea placeholder="Mensaje"></textarea>
+                        <button type="submit" class="btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Mi Tienda. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
